@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARUTI SAFETECH INFRA PVT LTD. | Enterprise Safety Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="notice-bar">
+        <div class="ticker-wrapper">
+            <span class="badge">IMPORTANT BRIEFING</span>
+            <p class="ticker-text">🚨 Structural maintenance audits active for global commercial frameworks. Field technicians sync tracking parameters daily via operational hub. 🚨</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo"><i class="fa-solid fa-fire-shield animate-pulse"></i> MARUTI SAFETECH INFRA PVT LTD.</div>
+        <ul class="nav-links" id="dynamicNavLinks">
+            <li><a href="#" class="nav-item active" onclick="switchTab('home')"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#" class="nav-item" onclick="switchTab('shop')"><i class="fa-solid fa-cart-shopping"></i> Shop</a></li>
+            <li><a href="#" class="nav-item" onclick="switchTab('contact')"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+        </ul>
+        <div class="nav-auth" id="navAuthSection">
+            <button class="btn btn-outline" onclick="openModal('unifiedAuthModal')"><i class="fa-solid fa-right-to-bracket"></i> Enterprise Portal Sign In</button>
+        </div>
+    </nav>
+
+    <button class="sos-floating-btn" onclick="triggerSOS()"><i class="fa-solid fa-triangle-exclamation"></i><span>SOS PIPELINE</span></button>
+
+    <main class="main-container">
+
+        <section id="home-tab" class="tab-content active animated-fade-in">
+            <div class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Choosing-Fire-Extinguishers-in-KEnya.jpg') no-repeat center center/cover; padding: 6rem 2rem; color: #fff; text-align: center; border-radius: 8px;">
+                <h1>Fire and Emergency Services</h1>
+                <p>Industrial suppression asset logging, dynamic payload calculations, and localized monitoring nodes.</p>
+                <div id="activeSessionBadge" class="user-identity-pill" style="display:none;">Session Context: Anonymous Profile</div>
+                <div class="hero-action-row" style="margin-top: 1.5rem;">
+                    <button class="btn btn-primary btn-lg" onclick="switchTab('contact')"><i class="fa-solid fa-phone"></i> Contact Us</button>
+                </div>
+            </div>
+            
+            <div class="services-grid" style="margin-top: 3rem;">
+                <div class="service-card">
+                    <i class="fa-solid fa-gas-pump icon-box"></i>
+                    <h3>Suppression Subsystem Recharging</h3>
+                    <p>Verified hydrotesting records automated directly to local administration databases.</p>
+                    <img src="4465.jpg" alt="Extinguisher Maintenance" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-top:1rem;">
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-shield-halved icon-box"></i>
+                    <h3>Enterprise Compliance Sizing</h3>
+                    <p>Engineered site auditing configurations mapping data to safety requirements.</p>
+                    <img src="Types-of-fire-extinguishers.jpg" alt="Extinguisher Fleet" style="width:100%; height:180px; object-fit:cover; border-radius:6px; margin-top:1rem;">
+                </div>
+            </div>
+
+            <div class="compatibility-matrix-section" style="margin-top: 3rem; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <h3 style="margin-bottom: 1rem;"><i class="fa-solid fa-table-list" style="color: var(--primary-color);"></i> Fire Extinguisher Classification Matrix</h3>
+                <p style="margin-bottom: 1.5rem; color: #666;">Reference tool mapping critical equipment response agents to designated material risk classes.</p>
+                <img src="1000x667-Extinguisher-Types-1.jpg" alt="Extinguisher Compatibility Matrix Chart" style="width: 100%; max-width: 900px; display: block; margin: 0 auto; border-radius: 6px;">
+            </div>
+        </section>
+
+        <section id="shop-tab" class="tab-content animated-fade-in">
+            <h2 class="section-title">Industrial Safety Procurement Engine</h2>
+            <div class="store-grid">
+                <div class="product-card">
+                    <img src="what-is-a-fire-extinguisher-definition-meaning-types.jpg" alt="Kanex Extinguishers Lineup" style="width:100%; height:220px; object-fit:cover; border-radius:6px; margin-bottom:1rem;">
+                    <h3>Commercial CO2 Extinguisher Asset</h3>
+                    <p class="price">$140.00</p>
+                    <button class="btn btn-primary btn-block" onclick="initiateCheckout('INV-901', 140.00)">Process Instant Checkout</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images.jfif" alt="Extinguisher Classifications Guide" style="width:100%; height:220px; object-fit:contain; background:#f7f9fa; border-radius:6px; margin-bottom:1rem;">
+                    <h3>Multi-Class Direct Suppression Array</h3>
+                    <p class="price">$185.00</p>
+                    <button class="btn btn-primary btn-block" onclick="initiateCheckout('INV-902', 185.00)">Process Instant Checkout</button>
+                </div>
+            </div>
+            
+            <div id="clientInvoiceArea" style="display:none; margin-top:2rem;">
+                <h3>Your Corporate Open Bills</h3>
+                <div class="table-container"><table class="data-table" id="clientInvoiceTable"><thead><tr><th>Invoice ID</th><th>Amount</th><th>Status</th><th>Execution</th></tr></thead><tbody></tbody></table></div>
+            </div>
+        </section>
+
+        <section id="admin-panel-tab" class="tab-content animated-fade-in">
+            <div class="panel-header admin-banner"><h2><i class="fa-solid fa-gears"></i> Corporate Infrastructure Command Center</h2></div>
+            
+            <div class="dashboard-metrics">
+                <div class="metric-card"><h4>Live SOS Metrics Logs</h4><p class="metric-value text-danger" id="sosLogCounter">0 Active Triggers</p></div>
+                <div class="metric-card"><h4>Active Billing Registrations</h4><p class="metric-value text-success" id="grossBillingField">$0.00 Tracked</p></div>
+            </div>
+
+            <h3>Generate Client Settlement Statement</h3>
+            <div class="billing-generation-block card-surface">
+                <input type="email" id="billClientEmail" placeholder="Client Registered Email">
+                <input type="number" id="billAmount" placeholder="Evaluation Total (USD)">
+                <button class="btn btn-primary" onclick="executeBillGeneration()">Commit Statement Records</button>
+            </div>
+
+            <h3>Live Employee Clock-In Synchronization Feed</h3>
+            <div class="table-container"><table class="data-table" id="adminAttendanceTable"><thead><tr><th>Employee ID</th><th>Technician Profile</th><th>Timestamp Node</th></tr></thead><tbody></tbody></table></div>
+        </section>
+
+        <section id="employee-panel-tab" class="tab-content animated-fade-in">
+            <div class="panel-header employee-banner"><h2><i class="fa-solid fa-users-gear"></i> Operational Crew Tracking Interface</h2></div>
+            <div class="card-surface m-top">
+                <h3>Submit Shift Attendance Record</h3>
+                <p>Synchronizes localized network positioning logging parameters to central databases.</p>
+                <button class="btn btn-primary" onclick="submitCrewAttendance()">Validate Attendance Node</button>
+            </div>
+            
+            <h3>Assigned Operations Deployments</h3>
+            <div class="task-list"><div class="task-item ongoing"><p><strong>Task Ref-8812:</strong> Structural system validation check - Balasore Grid</p><span class="status-pill">Dispatched</span></div></div>
+            
+            <div class="card-surface m-top dark-accent">
+                <h3>File Infrastructure Bug Log to Development Node</h3>
+                <textarea id="devIssueText" placeholder="Describe layout anomalies, database communication delays, or UI rendering state errors..."></textarea>
+                <button class="btn btn-outline" onclick="dispatchDeveloperTicket()">File System Issue</button>
+            </div>
+        </section>
+
+        <section id="developer-panel-tab" class="tab-content animated-fade-in">
+            <div class="panel-header dev-banner"><h2><i class="fa-solid fa-code"></i> Engineering Level Access Diagnostics Terminal</h2></div>
+            <h3>Reported Core System Issues</h3>
+            <div class="table-container"><table class="data-table" id="devTicketsTable"><thead><tr><th>Tracking Token ID</th><th>Source Nodes</th><th>System Issue Parameters</th><th>State</th></tr></thead><tbody></tbody></table></div>
+        </section>
+
+        <section id="contact-tab" class="tab-content animated-fade-in">
+            <h2 class="section-title">Initiate Technical Consultation</h2>
+            <div class="contact-layout">
+                <div class="card-surface info-glow">
+                    <h3>Corporate Communication Portal</h3>
+                    <p>Connect immediately with our primary engineering desks and infrastructure compliance teams.</p>
+                    <div class="contact-item-row">
+                        <i class="fa-solid fa-phone-volume contact-icon text-danger"></i>
+                        <div>
+                            <h4>Hotline Channel</h4>
+                            <p class="contact-data-text"><a href="tel:+917504273161">+91-7504273161</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item-row">
+                        <i class="fa-solid fa-envelope-open-text contact-icon text-warning"></i>
+                        <div>
+                            <h4>Secure Mail Network</h4>
+                            <p class="contact-data-text"><a href="mailto:marutifirebls@gmail.com">marutifirebls@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="address-card card-surface">
+                    <h3>Corporate Headquarters</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Maruti Safetech Complex, Central Industrial Zone, Balasore, Odisha, India.</p>
+                    <p>Standardized Safety Systems Audited and Registered.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="unifiedAuthModal" class="modal-backdrop">
+        <div class="modal-surface">
+            <div class="auth-tabs">
+                <button class="auth-tab-toggle active" id="loginTabBtn" onclick="toggleAuthMode('login')">Portal Sign In</button>
+                <button class="auth-tab-toggle" id="regTabBtn" onclick="toggleAuthMode('reg')">Client Registration</button>
+            </div>
+
+            <form id="authLoginForm" onsubmit="executeGatewayLogin(event)">
+                <div class="form-group"><label>Account Email Context</label><input type="email" id="userEmailInput" required></div>
+                <div class="form-group"><label>Password Parameters</label><input type="password" id="userPassInput" required></div>
+                
+                <div class="form-group" id="admin2FALayer" style="display:none; border-top:2px dashed #e2e8f0; padding-top:1rem;">
+                    <label class="text-danger"><strong><i class="fa-solid fa-key"></i> Input Admin MFA Security Token (Check Terminal Dev Output)</strong></label>
+                    <input type="text" id="adminOtpInput" placeholder="Enter 6-digit OTP code">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Authorize Workspace</button>
+            </form>
+
+            <form id="authRegForm" onsubmit="executeGatewayRegister(event)" style="display:none;">
+                <div class="form-group"><label>Client / Enterprise Name</label><input type="text" id="regUsername" required></div>
+                <div class="form-group"><label>Corporate Core Email Address</label><input type="email" id="regEmail" required></div>
+                <div class="form-group"><label>Mobile Phone Line</label><input type="tel" id="regPhone" required></div>
+                <div class="form-group"><label>Secure Password Configuration</label><input type="password" id="regPassword" required></div>
+                <div class="form-group"><label>Employee ID (Skip if Client)</label><input type="text" id="regEmpId" placeholder="MFS-YYYY-XX"></div>
+                <button type="submit" class="btn btn-primary btn-block">Register Secure Profile</button>
+            </form>
+            
+            <button type="button" class="btn btn-text btn-block" onclick="closeModal('unifiedAuthModal')">Abort Request</button>
+        </div>
+    </div>
+
+    <div id="paymentGatewayModal" class="modal-backdrop">
+        <div class="modal-surface payment-box">
+            <h3><i class="fa-solid fa-credit-card"></i> Maruti Secure Payment Gateway Pipeline</h3>
+            <p>Processing Transaction Validation Routing for Invoice Ref: <strong id="gatewayInvoiceRef">N/A</strong></p>
+            <div class="amount-badge">$<span id="gatewayAmountField">0.00</span> USD</div>
+            <div class="form-group"><label>Cardholder Identification Identity</label><input type="text" placeholder="Cardholder Full Name"></div>
+            <div class="form-group"><label>Credit Card String Token</label><input type="text" placeholder="XXXX - XXXX - XXXX - XXXX"></div>
+            <button class="btn btn-success btn-block" onclick="commitGatewayPayment()">Authorize Settlement Transfer</button>
+            <button class="btn btn-text btn-block" onclick="closeModal('paymentGatewayModal')">Cancel Transaction</button>
+        </div>
+    </div>
+
+<footer class="corporate-footer" style="text-align: center; padding: 2rem 1rem; background-color: #1a202c; color: #fff;">
+        <div class="footer-socials" style="margin-bottom: 1rem;">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="color: #fff; margin: 0 12px; font-size: 1.4rem; transition: color 0.3s;" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#fff'">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: #fff; margin: 0 12px; font-size: 1.4rem; transition: color 0.3s;" onmouseover="this.style.color='#e1306c'" onmouseout="this.style.color='#fff'">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="color: #fff; margin: 0 12px; font-size: 1.4rem; transition: color 0.3s;" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#fff'">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+        <p style="margin: 0; font-size: 0.9rem; color: #a0aec0;">&copy; 2026 Maruti Safetech Infra Pvt Ltd. Standards Authenticated System.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
