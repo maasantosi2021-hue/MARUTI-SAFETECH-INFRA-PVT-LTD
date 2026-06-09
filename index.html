@@ -184,25 +184,27 @@
             display: block;
         }
 
-        /* Hero Layer */
+        /* Hero Layer with Updated Image Banner */
         .hero-section {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8)), url('Choosing-Fire-Extinguishers-in-KEnya.jpg') no-repeat center center/cover !important;
-            padding: 100px 40px !important;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7)), url('https://www.variex.in/fire-fighting-equipment-banner-2/') no-repeat center center/cover !important;
+            padding: 120px 40px !important;
             border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .hero-section h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 800;
             margin-bottom: 15px;
             letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         .hero-section p {
-            font-size: 1.15rem;
-            color: #94a3b8;
+            font-size: 1.25rem;
+            color: #cbd5e1;
             max-width: 700px;
             margin: 0 auto 30px auto;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
         }
 
         /* Grid Framework & Cards */
@@ -235,7 +237,7 @@
             display: inline-block;
         }
         .service-card h3, .product-card h3 {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 10px;
             color: var(--secondary);
@@ -251,14 +253,30 @@
             font-size: 2rem;
             font-weight: 800;
             color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
             margin-bottom: 30px;
-            position: relative;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border);
         }
         .price {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--secondary);
-            margin-bottom: 15px;
+        }
+        .currency {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
         }
 
         /* Tables Structural Design */
@@ -417,19 +435,79 @@
         <!-- SHOP TAB LAYER -->
         <section id="shop-tab" class="tab-content">
             <h2 class="section-title">Industrial Safety Procurement Engine</h2>
+            <p class="section-subtitle">Certified industrial fire fighting machinery, response tools, and suppression arrays aligned with global industrial code guidelines.</p>
+            
             <div class="store-grid">
+                <!-- Product 1: CO2 Extinguisher -->
                 <div class="product-card">
                     <img src="what-is-a-fire-extinguisher-definition-meaning-types.jpg" alt="Kanex Extinguishers Lineup" style="width:100%; height:220px; object-fit:cover; border-radius:8px; margin-bottom:20px;">
                     <h3>Commercial CO2 Extinguisher Asset</h3>
-                    <div class="price">$140.00</div>
+                    <p>High-efficiency clean agent suppression engineered for electrical room setups and computational machinery risk zones.</p>
+                    <div class="price-row">
+                        <span class="price">$140.00</span>
+                        <span class="currency">USD / Unit</span>
+                    </div>
                     <button class="btn btn-primary btn-block" onclick="initiateCheckout('INV-901', 140.00)">Process Instant Checkout</button>
                 </div>
                 
+                <!-- Product 2: Powder Extinguisher -->
                 <div class="product-card">
                     <img src="images.jfif" alt="Extinguisher Classifications Guide" style="width:100%; height:220px; object-fit:contain; background:#f8fafc; border-radius:8px; margin-bottom:20px;">
-                    <h3>Multi-Class Direct Suppression Array</h3>
-                    <div class="price">$185.00</div>
+                    <h3>Multi-Class Dry Powder Suppression Array</h3>
+                    <p>Versatile Class A, B, and C chemical payload system built for general manufacturing and workshop configurations.</p>
+                    <div class="price-row">
+                        <span class="price">$185.00</span>
+                        <span class="currency">USD / Unit</span>
+                    </div>
                     <button class="btn btn-primary btn-block" onclick="initiateCheckout('INV-902', 185.00)">Process Instant Checkout</button>
+                </div>
+
+                <!-- Product 3: Foam Extinguisher -->
+                <div class="product-card">
+                    <img src="https://humanfocus.co.uk/blog/foam-fire-extinguishers-when-and-how-to-use-them/" alt="AFFF Foam Fire Extinguisher" style="width:100%; height:220px; object-fit:cover; border-radius:8px; margin-bottom:20px;">
+                    <h3>AFFF Aqueous Film-Forming Foam Array</h3>
+                    <p>Designed explicitly for fast suppression of Class B liquid fuels and combustible materials by forming a cooling blanket overlay.</p>
+                    <div class="price-row">
+                        <span class="price">$115.00</span>
+                        <span class="currency">USD / Unit</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="initiateCheckout('INV-903', 115.00)">Process Instant Checkout</button>
+                </div>
+
+                <!-- Product 4: Heavy Duty Industrial Fire Hose -->
+                <div class="product-card">
+                    <img src="https://sgbresources.com/basic-fire-fighting-equipment-list/" alt="Reinforced Structural Fire Hose Node" style="width:100%; height:220px; object-fit:cover; border-radius:8px; margin-bottom:20px;">
+                    <h3>Reinforced Structural Delivery Hose Node</h3>
+                    <p>Heavy-duty, weather-resistant textile lining with standard aluminum connection couplers built for high hydraulic output pipelines.</p>
+                    <div class="price-row">
+                        <span class="price">$245.00</span>
+                        <span class="currency">USD / 30m Box</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="initiateCheckout('INV-904', 245.00)">Process Instant Checkout</button>
+                </div>
+
+                <!-- Product 5: Automatic Fire Sprinkler Node -->
+                <div class="product-card">
+                    <img src="https://sgbresources.com/basic-fire-fighting-equipment-list/" alt="Thermal Sensitive Sprinkler Head" style="width:100%; height:220px; object-fit:cover; border-radius:8px; margin-bottom:20px;">
+                    <h3>Thermal-Sensitive Ceiling Sprinkler Node</h3>
+                    <p>Quick-response glass bulb mechanism triggering instant containment response patterns upon hitting specific heat signatures.</p>
+                    <div class="price-row">
+                        <span class="price">$35.00</span>
+                        <span class="currency">USD / Pack of 5</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="initiateCheckout('INV-905', 35.00)">Process Instant Checkout</button>
+                </div>
+
+                <!-- Product 6: High-Volume Nozzle Array -->
+                <div class="product-card">
+                    <img src="https://sgbresources.com/basic-fire-fighting-equipment-list/" alt="Adjustable Output Spray Nozzle" style="width:100%; height:220px; object-fit:cover; border-radius:8px; margin-bottom:20px;">
+                    <h3>Adjustable Stream Output Jet Nozzle Array</h3>
+                    <p>Solid brass core featuring tactical flow pattern controllers from complete fog shroud setup to concentrated long-range solid streams.</p>
+                    <div class="price-row">
+                        <span class="price">$95.00</span>
+                        <span class="currency">USD / Unit</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="initiateCheckout('INV-906', 95.00)">Process Instant Checkout</button>
                 </div>
             </div>
             
